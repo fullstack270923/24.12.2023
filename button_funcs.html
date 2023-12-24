@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button Functions</title>
+</head>
+<body>
+    <button onmouseover="this.style.backgroundColor='yellow'"
+            onmouseout="this.style.backgroundColor=''">COLOR CHANGE USING this</button>
+    <br /><br />
+    <button id="my-button" onmouseover="mouse_over()"
+            onmouseout="mouse_out()">COLOR CHANGE USING function</button>            
+    <script>
+
+        function mouse_over() {
+            document.getElementById('my-button').style.color = 'yellow'
+        }
+        function mouse_out() {
+            document.getElementById('my-button').style.color = ''
+        }        
+
+    </script>
+
+
+</body>
+</html>
