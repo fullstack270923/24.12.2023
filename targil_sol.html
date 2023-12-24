@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution</title>
+</head>
+<body>
+    <button onclick="click_p10()">Click me!</button><br />
+    <p id="p1-10"></p>
+    <button onclick="click_rand()">Click me!</button><br />
+    <p id="p-random"></p>
+    <button onclick="click_time()">Click me!</button>
+    <p id="p-time"></p>
+    <button onmouseover="this.style.backgroundColor='yellow'"
+            onmouseout="this.style.backgroundColor=''">COLOR CHANGE USING this</button>
+    <br /><br />
+    <button id="my-button" onmouseover="mouse_over()"
+            onmouseout="mouse_out()">COLOR CHANGE USING function</button>            
+    <script>
+
+        function mouse_over() {
+            document.getElementById('my-button').style.color = 'yellow'
+        }
+        function mouse_out() {
+            document.getElementById('my-button').style.color = ''
+        }        
+
+        // 1. create button when clicked execute a function which prints 
+        //     numebrs from 1 to 10
+        // 2. create another button when clicked execute a function which 
+        //     prints a random number (from 1-10)
+        // 3. create another button when clicked execute a function which 
+        //     prints the time (new Date())
+        function click_p10() {
+            
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('p1-10').innerHTML += i + ' '
+            }
+            document.getElementById('p1-10').innerHTML += `<br >`
+        }
+
+        function click_rand() {
+            document.getElementById('p-random').innerHTML += Math.floor(Math.random() * 10) + 1 + ' '
+        }      
+        
+        function click_time() {
+            document.getElementById('p-time').innerHTML += Date() + '<br />'
+        }         
+
+    </script>
+
+
+</body>
+</html>
